@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática - Cards de Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode">
+    <div id="backdrop" class="backdrop hidden"></div>
+
+    <header class="header">
+        <h1>Dev Profiles</h1>
+        <div class="header-actions">
+            <button id="theme-toggle" class="btn theme-btn">
+                <span class="icon">🌙</span> Modo Escuro
+            </button>
+            <button id="color-toggle" class="btn theme-btn">
+                🎨 Cor dos Cards
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="cards-grid" id="cards-container">
+            <!-- Cards serão injetados aqui via JS -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

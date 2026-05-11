@@ -1,0 +1,16 @@
+/vendor
+/node_modules
+/public/storage
+Homestead.json
+Homestead.yaml
+.env
+.env.backup
+.pytest_cache
+.phpunit.result.cache
+Dockerfil
+docker-compose.yml
+.idea
+.vscode
+*.log
+.DS_Store
+Thumbs.db

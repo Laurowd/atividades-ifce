@@ -1,0 +1,82 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.navbar-nav a {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ff3c00;
+}
+
+.navbar-nav a:hover {
+  color: #fff;
+  background-color: #ff3c00;
+  border-radius: 5px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px 0;
+}
+
+h1, h2 {
+  margin: 0 0 20px;
+}
+
+.form-section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2d4373;
+}
+
+.lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista li {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}

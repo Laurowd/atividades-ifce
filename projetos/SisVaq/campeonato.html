@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão da Competição - Vaquejada</title>
+    <link rel="stylesheet" href="campeonato.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> 
+            <img src="img/logo-removebg-preview.png" width="50px" alt="VaqueLivre Logo"> VaqueLivre
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="cadastro.html">Cadastre-se</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="campeonato.html">Campeonato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="inscricao.html">Inscrição</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="gestao.html">Gestão</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+    <section class="form-section">
+        <h2>Criação de Modalidades</h2>
+        <form id="formModalidade">
+            <label for="nomeModalidade">Nome da Modalidade:</label>
+            <input type="text" id="nomeModalidade" name="nomeModalidade" required>
+
+            <button type="button" onclick="adicionarModalidade()">Adicionar Modalidade</button>
+        </form>
+        <ul id="listaModalidades" class="lista"></ul>
+    </section>
+
+    <section class="form-section">
+        <h2>Organizar Rodadas</h2>
+        <form id="formRodada">
+            <label for="pares">Pares de Competidores (IDs separados por vírgula):</label>
+            <input type="text" id="pares" name="pares" placeholder="Ex: 1 vs 2, 3 vs 4" required>
+
+            <button type="button" onclick="adicionarRodada()">Adicionar Rodada</button>
+        </form>
+        <ul id="listaRodadas" class="lista"></ul>
+    </section>
+
+    <section class="form-section">
+        <h2>Registro de Desempenho</h2>
+        <form id="formDesempenho">
+            <label for="competidorID">ID do Competidor:</label>
+            <input type="text" id="competidorID" name="competidorID" required>
+
+            <label for="pontuacao">Pontuação:</label>
+            <input type="number" id="pontuacao" name="pontuacao" required>
+
+            <label for="tempo">Tempo de Prova (em segundos):</label>
+            <input type="number" id="tempo" name="tempo" required>
+
+            <label for="observacoes">Observações dos Juízes:</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+            <button type="button" onclick="registrarDesempenho()">Registrar Desempenho</button>
+        </form>
+        <ul id="listaDesempenhos" class="lista"></ul>
+    </section>
+
+    <section class="form-section">
+        <h2>Próximos Confrontos</h2>
+        <button type="button" onclick="gerarProximosConfrontos()">Gerar Próximos Confrontos</button>
+        <ul id="listaConfrontos" class="lista"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

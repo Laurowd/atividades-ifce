@@ -1,0 +1,47 @@
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+h2 {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #ff3c00;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.btn-primary:hover {
+  background-color: #e63600;
+}
+
+a {
+  color: #ff3c00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

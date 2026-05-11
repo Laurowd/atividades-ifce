@@ -1,0 +1,31 @@
+Atividade 10 - Diagnóstico de Erros
+
+Objetivo: Identificar e corrigir uma migration com erro.
+
+-------------------------------------------------------
+CÓDIGO COM ERRO PROPOSITAL (Exemplo):
+-------------------------------------------------------
+
+Schema::create('pedidos', function (Blueprint $table) {
+    $table->increments('id');
+    $table->integer('cliente_id'); // ERRO: Tipo incompatível com id() padrão (bigIncrements)
+    $table->foreign('cliente_id')->references('id')->on('clientes');
+});
+
+PROBLEMA:
+O método `id()` do Laravel cria uma coluna do tipo `UNSIGNED BIG INT` (bigIncrements).
+O método `integer('cliente_id')` cria uma coluna do tipo `INT`.
+Ao tentar criar a chave estrangeira, o banco de dados (MySQL) rejeita porque os tipos das colunas (referenciada e referência) devem ser idênticos.
+
+-------------------------------------------------------
+SOLUÇÃO CORRETA:
+-------------------------------------------------------
+
+Forma Manual antiga:
+$table->unsignedBigInteger('cliente_id');
+$table->foreign('cliente_id')->references('id')->on('clientes');
+
+Forma Moderna (Recomendada):
+$table->foreignId('cliente_id')->constrained('clientes');
+
+A migration correta utiliza `foreignId()` que já cria a coluna com o tipo correto compatível com `id()`.
